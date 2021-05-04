@@ -6,7 +6,7 @@ function [] = FinalProject()
 % --------------------------Getting the plot onto the figure
     plotting.fig = figure('numbertitle','off','name','Graph it Yourself Calculator');
     plotting.fig = plot(0,0);
-    plotting.graphTitle = uicontrol('style','text','units','normalized','position', [.6 .91 .09 .095], 'string','title','HorizontalAlignment','right');
+    plotting.graphTitle = uicontrol('style','text','units','normalized','position', [.6 .9 .09 .095], 'string','title','HorizontalAlignment','right');
     plotting.xAxisTitle = uicontrol('style','text','units','normalized','position', [.6 .34 .09 .095], 'string','x-axis','HorizontalAlignment','right');
     plotting.yAxisTitle = uicontrol('style','text','units','normalized','position', [.3 .65 .09 .095], 'string','y-axis','HorizontalAlignment','right');
     pos = [0.45 0.475 .5 .43];
@@ -44,29 +44,16 @@ function [] = FinalProject()
     plotting.yLimMessage = uicontrol('style','text','units','normalized','position', [.41 0 .09 .095],'string','Y Lim','HorizontalAlignment','right');
     
 %--------------------------Plot Title
-    plotting.title = uicontrol('style','edit','units','normalized','position', [.53 .23 .09 .095], 'callback', {@changeTitle});
+    plotting.title = uicontrol('style','edit','units','normalized','position', [.53 .23 .09 .095], 'callback', {@changetitle});
     plotting.titleMessage = uicontrol('style','text','units','normalized','position', [.52 .13 .09 .095], 'string','Plot Title','HorizontalAlignment','right');
     function [] = changeTitle(source, event)
         
-        plotting.graphTitle.String = plotting.title.String;
+        
         
     end
 %--------------------------Axes titles
-    plotting.xAxisTitleNew = uicontrol('style','edit','units','normalized','position', [.63 .23 .09 .095], 'callback', {@noMoreNames});
-    plotting.xAxisTitleNewMessage = uicontrol('style','text','units','normalized','position', [.61 .13 .09 .095], 'string','X-axis name','HorizontalAlignment','right');
-    function [] = noMoreNames(source,event)
-        
-        plotting.xAxisTitle.String = plotting.xAxisTitleNew.String;
-        
-    end
 
-    plotting.yAxisTitleNew = uicontrol('style','edit','units','normalized','position', [.73 .23 .09 .095], 'callback', {@noMoreNames2});
-    plotting.yAxisTitleNewMessage = uicontrol('style','text','units','normalized','position', [.71 .13 .09 .095], 'string','Y-axis name','HorizontalAlignment','right');
-    function [] = noMoreNames2(source,event)
-        
-        plotting.yAxisTitle.String = plotting.yAxisTitleNew.String;
-        
-    end
+
 end
 
 %--------------------------Now we want to plot our x and y vales
@@ -74,6 +61,7 @@ function [] = call (~,~)
 
     global plotting;
     if isempty(plotting.xVal.String) || isempty(plotting.yVal.String)
+        
         msgbox('Place values in both the X Values and Y Values boxes','guiPlottingError','error','modal')
         return
         
@@ -83,6 +71,7 @@ function [] = call (~,~)
     yValues = str2num(plotting.yVal.String);
 
     if length(xValues) ~= length(yValues)
+        
         msgbox('Place the same number of coordinates in each box','guiPlottingError','error','modal')
         return
         
@@ -97,16 +86,12 @@ function [] = push(~,~)
 
     global plotting
     plotting.fig = plot(0,0);
-    pos = [0.45 0.475 .5 .43];
+    pos = [0.2 0.35 .75 .6];
     subplot('Position',pos);
-    
-    plotting.graphTitle = uicontrol('style','text','units','normalized','position', [.6 .91 .09 .095], 'string','title','HorizontalAlignment','right');
-    plotting.xAxisTitle = uicontrol('style','text','units','normalized','position', [.6 .34 .09 .095], 'string','x-axis','HorizontalAlignment','right');
-    plotting.yAxisTitle = uicontrol('style','text','units','normalized','position', [.3 .65 .09 .095], 'string','y-axis','HorizontalAlignment','right');
 
 end
 
-%--------------------------Setting up for the button clicking
+
 function [] = bselection(~,~)
 
     global plotting
@@ -116,7 +101,6 @@ function [] = bselection(~,~)
 
 end
 
-%--------------------------Setting up for the button clicking
 function [] = bg2selection(~,~)
 
     global plotting
@@ -128,7 +112,6 @@ function [] = bg2selection(~,~)
     graph(buttonColor, buttonSpecies)
 end
 
-%--------------------------This is what should run when the buttons click
 function [] = graph(buttonColor, buttonSpecies)
 
     global plotting
@@ -161,7 +144,6 @@ function [] = graph(buttonColor, buttonSpecies)
 
 end
 
-%--------------------------Changing the limits
 function [] = Lim(~,~)
 
     global plotting

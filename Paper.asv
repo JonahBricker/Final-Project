@@ -1,0 +1,36 @@
+    There is no way to check page requirements on MATLAB, so I will type up
+the paper in another application and paste it in here while trying to make 
+it easy to read.
+
+2-3 Page Paper
+
+Throughout this final project I ran into a lot of problems. In the very 
+beginning I was having trouble getting the plot for the entirety of the 
+final project onto the same figure that was being produced by my globalized 
+variable. This is because I wasn’t starting the plotting function with the 
+globalized variable. So, the end result left me with two pop-ups. One 
+window with a plot which wasn’t filled out and another with a completely 
+blank figure. After fixing this problem, the ui-controls ran pretty smooth 
+for a while; however, I did notice that the text boxes created by the 
+ui-controls had a little grey background surrounding them which could 
+interfere with the edit boxes and plots surrounding it. So, I had to be 
+pretty careful with the placement of these boxes because quality of 
+production does matter when you’re showing your product to other people. 
+The edit boxes for the x axis title and the y axis title ran relatively 
+smoothly because they were pretty similar to the setup I used for the 
+previous edit boxes. It required a lot of googling to fully understand how 
+those edit boxes worked, but once I got it down I was able to run through 
+it pretty smoothly for the rest of this final project. Then I hit the radio 
+buttons. These were by far the most excruciating part of this final 
+project. For the longest time I couldn’t understand how to get them to work 
+because I was making them way to small. The buttons weren’t appearing 
+because the box had a height and width that was only about one tenth by one 
+tenth. So technically they were showing up correctly, but due to the 
+different type of positioning the radio buttons have in their individual 
+calls I wasn’t seeing them show up. I finally changed the height of the 
+radio button box to one and I was luckily able to see one of the radio 
+buttons. That’s when two and two came together and I was able to play 
+around with the positionings and successfully move all the radio buttons to 
+the left side. But that wasn’t the end of it, the coloring and line typing 
+of the graph was also a bumpy road. Initially, I had it set to call two 
+different functions outside of the master function to change the color and type of line. But this didn’t work because if you clicked any of the buttons it would revert the entire graph to the initial graph type except for the button I clicked. I was eventually able to merge these two functions into one, but it took nine different else statements to get it done. And it still doesn’t work perfectly because you have to click on the line “species” before you click on the line ”color” button. All of the titles for the graph were such a nice break from all of the coding I had done up till now that they ran so smoothly. And it was at this time that I discovered I didn’t have to call to an external function every time. However it does drive me crazy that the event and source input arguments are always yellowed out. As you know, for the call to plot I wasn’t entirely sure how to take the values that were inputted into the edit box and use them to plot on the pre-existing blank graph. I was able to get into contact with Quinn to help me out with this part and it ended up working perfectly. She did tell me that there were examples on canvas I could look at to help out with the rest of the lab, but I couldn’t find the examples so I ended up continuing on my own. The reset button ran very smoothly, I was able to code it in entirely on my own the first try and I think I put it in a pretty slick place. Lastly, I was supposed to get the x and y limit input edit boxes working, but for the life of me I couldn’t finish this. And it got to the point where I had to ask myself what mattered more, fully complete code that might lose me three to five points or the thirty points that this write up is worth. I figured that conveying my understanding of the code through this document was more important than perfecting the code which would be submitted at the end of the project. And with that I’m through all of the coding. The git section of this project was no trouble at all. All I needed to do was create the hub online and the final project folder through my terminal I created another branch off my main branch since we aren’t supposed to directly edit the main branch in git. Then I wrote all my code onto that new branch and after I finish writing up this report, I will be checking the status of the branch to make sure everything was added. The new code will be added, committed, and pushed to the branch so that everything is up to date, and I’ll merge the branch onto the main branch as the last step in my lab. After that, everything should be ready to submit. All in all, this was actually a pretty enjoyable project. If I had spent a little less time on physics rather than leaving this to be rushed last minute then I would have had a lot of fun with trying to figure out all of the little problems; however, today it was all just stressing me out. I hope my code looks pretty good because I did not have a partner for this project, so its all my own original work. Than you – Jonah Bricker
